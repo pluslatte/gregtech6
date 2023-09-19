@@ -19,7 +19,10 @@ buildscript {
 		}
 	}
 	dependencies {
-		classpath 'net.minecraftforge.gradle:ForgeGradle:1.2.11'
+		classpath ('com.anatawa12.forge:ForgeGradle:1.2-1.1.+') {
+			changing = true
+		}
+		//classpath 'net.minecraftforge.gradle:ForgeGradle:1.2.11'
 		//classpath 'net.minecraftforge.gradle:ForgeGradle:1.2-SNAPSHOT'
 		//classpath 'net.onedaybeard.artemis:artemis-odb-gradle-plugin:2.2.0'
 		//classpath 'net.onedaybeard.artemis:artemis-fluid-gradle-plugin:2.2.0'
