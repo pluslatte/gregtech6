@@ -1,3 +1,11 @@
+pluslatte's fork of GregTech-6
+
+# 概要
+## 機能追加
+- 初期スポーンエリアに必ず要塞を生成するオプション。
+
+以下初期readme。
+
 This is the Git Repository for GregTech-6
 
 # License
