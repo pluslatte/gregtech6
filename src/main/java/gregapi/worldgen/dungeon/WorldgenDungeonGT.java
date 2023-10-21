@@ -136,7 +136,7 @@ public class WorldgenDungeonGT extends WorldgenObject {
 	@Override
 	public boolean generate(World aWorld, Chunk aChunk, int aDimType, int aMinX, int aMinZ, int aMaxX, int aMaxZ, Random aRandom, BiomeGenBase[][] aBiomes, Set<String> aBiomeNames) {
 		boolean guaranteeSpawnDungeonGen = ConfigsGT.GREGTECH.get("general", "GuaranteeSpawnDungeon", T);
-		if (Math.abs(aMinZ) > mMaxSize*16 || Math.abs(aMinX) > mMaxSize*16 || !guaranteeSpawnDungeonGen) {
+		if (aMinZ > mMaxSize*16 || aMinZ < 0 || aMinX > mMaxSize*16 || aMinX < 0 || !guaranteeSpawnDungeonGen) {
 			if (aRandom.nextInt(mProbability) != 0 || checkForMajorWorldgen(aWorld, aMinX, aMinZ, aMaxX, aMaxZ)) return F;
 			if (Math.abs(aMinZ) < 256+mMaxSize*16 && Math.abs(aMinX) < 256+mMaxSize*16) return F;
 		}
